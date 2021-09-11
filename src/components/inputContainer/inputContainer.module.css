@@ -1,0 +1,26 @@
+.filter {
+    /* background-color: red; */
+    width: 88%;
+    height: 10vh;
+    margin: 5vh auto;
+    padding: 1vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    width: 35%;
+    height: 5.5vh;
+    padding: 1vh;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 0.9rem;
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform: capitalize;
+
+}

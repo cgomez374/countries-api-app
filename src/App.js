@@ -1,7 +1,7 @@
 import react from 'react';
 import Navbar from './components/navbar/navbar';
 import Countries from './components/countries/countries';
-import Styles from './index.css';
+import './index.css';
 
 function App() {
   return (

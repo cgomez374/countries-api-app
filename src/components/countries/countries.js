@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import {getCountries} from '../../contexts/api/getCountries'
-import Styles from './countries.module.css'
+import {getCountries} from '../../contexts/api/getCountries';
+import InputContainer from '../inputContainer/inputContainer';
+import Styles from './countries.module.css';
 
 const Countries = () => {
     //state
     const [countries, setCountries] = useState([]);
+    const [error, setError] = useState(false);
 
     //get counties at start
     useEffect(() => {
@@ -14,20 +16,21 @@ const Countries = () => {
 
     return (
         <main>
+            <InputContainer setCountries={setCountries} setError={setError} />
             <article className={Styles.countiesList}>
-                {countries.map((country) => {
+                {!error ? countries.map((country) => {
                     return (
                         <div className={Styles.country}>
                             <img className={Styles.countryImg} src={country.flag} alt="country flag" />
                             <div className={Styles.countryDetails}>
-                                <h3>{country.name}</h3><br />
-                                <p>population: {country.population}</p>
-                                <p>region: {country.region}</p>
-                                <p>capital: {country.capital}</p>
+                                {country.name ? <h3>{country.name}</h3> : null }<br/>
+                                {country.population ? <p>population: {country.population}</p> : null }
+                                {country.region ? <p>region: {country.region}</p> : null }
+                                {country.capital ? <p>capital: {country.capital}</p> : null }
                             </div>
                         </div>
                     )
-                })}
+                }) : <h3>{error}</h3> }
             </article>
         </main>
     )
