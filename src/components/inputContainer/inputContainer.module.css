@@ -1,9 +1,9 @@
 .filter {
     /* background-color: red; */
-    width: 88%;
+    width: 95%;
     height: 10vh;
     margin: 5vh auto;
-    padding: 1vh;
+    padding: 0;
 
     display: flex;
     flex-direction: row;
@@ -11,7 +11,7 @@
     align-items: center;
 }
 
-.search {
+.search, .select {
     width: 35%;
     height: 5.5vh;
     padding: 1vh;
@@ -23,4 +23,18 @@
     font-family: 'Nunito Sans', sans-serif;
     text-transform: capitalize;
 
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    outline: none;
+}
+
+.select {
+    width: 20%;
+}
+
+.select option {
+    /* background-color: red; */
+
+    font-size: 0.9rem;
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform: capitalize;
 }
