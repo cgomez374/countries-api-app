@@ -4,23 +4,41 @@ import {getCountriesByRegions} from '../../contexts/api/getCountriesByRegions';
 import {getCountries} from '../../contexts/api/getCountries'
 import Styles from './inputContainer.module.css'
 
-const InputContainer = ({ setCountries, setError }) => {
+const InputContainer = ({ countries, setCountries, setError }) => {
     //state for change
     const [input, setInput] = useState('');
+    const [region, setRegion] = useState("Filter by Region");
+
+    //update countries as input changes
+    useEffect(() => {
+        if(region === "Filter by Region"){
+            getCountriesByName(setCountries, setError, input);
+        }
+        else if(region !== "Filter by Region") {
+            let query = input.toLowerCase();
+            const countryRegX = new RegExp(query);
+            let results = [];
+
+            countries.filter(country => {
+                if(countryRegX.test(country.name.toLowerCase()))
+                    results.push(country);
+            });
+
+            setCountries(results);
+            console.log(results);
+        }
+    }, [input]);
 
     //handle input change
     const changeHandler = (e) => {
         if(e !== null){
             setInput(e.target.value);
         }
-
-    }
-    //update countries as input changes
-    useEffect(() => {
-        getCountriesByName(setCountries, setError, input);
-    }, [input]);
+    };
 
     const setCountriesByRegion = (e) => {
+        setRegion(e.target.value);
+
         if(e !== null && e.target.value !== "Filter by Region") {
             getCountriesByRegions(setCountries, setError, e.target.value);
         }

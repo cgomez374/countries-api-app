@@ -3,7 +3,6 @@ export const getCountriesByRegions = async (setCountries, setError, region = '')
         const response = await fetch(`https://restcountries.eu/rest/v2/region/${region}`);
         var data = await response.json();
         if(data){
-            console.log(data)
             setCountries(data);
         }
         else{

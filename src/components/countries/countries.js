@@ -16,7 +16,7 @@ const Countries = () => {
 
     return (
         <main>
-            <InputContainer setCountries={setCountries} setError={setError} />
+            <InputContainer countries={countries} setCountries={setCountries} setError={setError} />
             <article className={Styles.countiesList}>
                 {!error ? countries.map((country) => {
                     return (
