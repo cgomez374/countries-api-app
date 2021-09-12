@@ -11,12 +11,11 @@ const InputContainer = ({ countries, setCountries, setError }) => {
 
     //update countries as input changes
     useEffect(() => {
-        if(region === "Filter by Region"){
-            getCountriesByName(setCountries, setError, input);
-        }
-        else if(region !== "Filter by Region") {
+        getCountriesByName(setCountries, setError, input);
+
+        if(region !== "Filter by Region") {
             let query = input.toLowerCase();
-            const countryRegX = new RegExp(query);
+            let countryRegX = new RegExp(query);
             let results = [];
 
             countries.filter(country => {
@@ -25,7 +24,6 @@ const InputContainer = ({ countries, setCountries, setError }) => {
             });
 
             setCountries(results);
-            console.log(results);
         }
     }, [input]);
 
