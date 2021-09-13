@@ -47,8 +47,8 @@
   margin: 0;
   padding: 3vh;
 
-  font-size: 0.9rem
-;
+  font-size: 0.9rem;
+  color: #000;
+  text-decoration: none;
   align-items: center;
-  /* padding: 4vh; */
 }

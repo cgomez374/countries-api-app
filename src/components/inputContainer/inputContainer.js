@@ -18,7 +18,7 @@ const InputContainer = ({ countries, setCountries, setError }) => {
             let countryRegX = new RegExp(query);
             let results = [];
 
-            countries.filter(country => {
+            countries.forEach(country => {
                 if(countryRegX.test(country.name.toLowerCase()))
                     results.push(country);
             });
