@@ -21,7 +21,12 @@ const Countries = () => {
             <article className={Styles.countiesList}>
                 {!error ? countries.map((country) => {
                     return (
-                        <Link to={`/${country.alpha2Code}`} key={country.alpha2Code}>
+                        <Link to={{
+                            pathname: `/${country.alpha2Code}`,
+                            state: {
+                                countries: countries
+                            }
+                        }} key={country.alpha2Code}>
                             <div className={Styles.country} >
                                 <img className={Styles.countryImg} src={country.flag} alt="country flag" />
                                 <div className={Styles.countryDetails}>
