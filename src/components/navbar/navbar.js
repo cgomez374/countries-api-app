@@ -7,7 +7,7 @@ const navbar = () => {
             <nav className={Styles.navbar}>
                 <ul className={Styles.nav}>
                     <li>where in the world?</li>
-                    <li>dark mode</li>
+                    <li><i class="far fa-moon"></i> dark mode</li>
                 </ul>
             </nav>
         </header>
