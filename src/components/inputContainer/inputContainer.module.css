@@ -1,55 +1,56 @@
 .filter {
-    /* background-color: red; */
-    width: 80%;
-    height: 15vh;
-    margin: 5vh auto;
-    padding: 0;
+  /* background-color: red; */
+  width: 80%;
+  min-height: 15vh;
+  margin: 5vh auto;
+  padding: 0;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.search, .select {
-    width: 35%;
-    height: 5.5vh;
-    padding: 1vh;
+.search,
+.select {
+  width: 35%;
+  min-height: 5.5vh;
+  padding: 1vh;
 
-    border: none;
-    border-radius: 5px;
+  border: none;
+  border-radius: 5px;
 
-    font-size: 0.9rem;
-    font-family: 'Nunito Sans', sans-serif;
-    text-transform: capitalize;
+  font-size: 0.9rem;
+  font-family: "Nunito Sans", sans-serif;
+  text-transform: capitalize;
 
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    outline: none;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  outline: none;
 }
 
 .select {
-    width: 20%;
+  width: 20%;
 }
 
 .select option {
-    /* background-color: red; */
+  /* background-color: red; */
 
-    font-size: 0.9rem;
-    font-family: 'Nunito Sans', sans-serif;
-    text-transform: capitalize;
+  font-size: 0.9rem;
+  font-family: "Nunito Sans", sans-serif;
+  text-transform: capitalize;
 }
 
 @media (max-width: 1250px) {
-    .filter {
-        /* background-color: red; */
-        width: 90%;
-    }
-    .search{
-        width: 40%;
-    }
-    .select{
-        width: 40%;
-    }
+  .filter {
+    /* background-color: red; */
+    width: 90%;
+  }
+  .search {
+    width: 40%;
+  }
+  .select {
+    width: 40%;
+  }
 }
 
 @media (max-width: 650px) {
@@ -57,10 +58,10 @@
     flex-direction: column;
     justify-content: space-around;
   }
-  .search{
-      width: 65%;
+  .search {
+    width: 65%;
   }
-  .select{
-      width: 65%;
+  .select {
+    width: 65%;
   }
 }

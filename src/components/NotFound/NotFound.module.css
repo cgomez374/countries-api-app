@@ -1,0 +1,24 @@
+.notFound {
+    /* background-color: aquamarine; */
+    width: 80%;
+    height: auto;
+    margin: 10vh auto;
+    text-align: center;
+    color: red;
+    
+}
+
+.notFound button {
+    background-color: red;
+    width: 40vh;
+    height: 5vh;
+    margin: 5vh auto;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+}
