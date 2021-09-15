@@ -24,7 +24,7 @@ const Countries = () => {
                         <Link to={{
                             pathname: `/${country.alpha2Code}`,
                             state: {
-                                countries: countries
+                                country: country
                             }
                         }} key={country.alpha2Code}>
                             <div className={Styles.country} >
