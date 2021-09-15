@@ -1,7 +1,7 @@
 .filter {
     /* background-color: red; */
-    width: 95%;
-    height: 10vh;
+    width: 80%;
+    height: 15vh;
     margin: 5vh auto;
     padding: 0;
 
@@ -37,4 +37,30 @@
     font-size: 0.9rem;
     font-family: 'Nunito Sans', sans-serif;
     text-transform: capitalize;
+}
+
+@media (max-width: 1250px) {
+    .filter {
+        /* background-color: red; */
+        width: 90%;
+    }
+    .search{
+        width: 40%;
+    }
+    .select{
+        width: 40%;
+    }
+}
+
+@media (max-width: 650px) {
+  .filter {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .search{
+      width: 65%;
+  }
+  .select{
+      width: 65%;
+  }
 }
