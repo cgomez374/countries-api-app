@@ -9,7 +9,7 @@ const Borders = ({code}) => {
 
     useEffect(() => {
         getCountry(setBorderCountry, code);
-    }, [])
+    }, [code])
 
     return (
         <div>

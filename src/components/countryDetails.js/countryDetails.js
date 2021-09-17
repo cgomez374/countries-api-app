@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useLocation, Link, Redirect } from "react-router-dom";
+import React from "react";
+import { useLocation, Link} from "react-router-dom";
 import Styles from "./countryDetails.module.css";
 import Borders from "../Borders/Borders";
 import NotFound from '../NotFound/NotFound';
@@ -43,15 +43,20 @@ const CountryDetails = () => {
             </div>
             <div className={Styles.borders}>
               <h4>border countries:</h4>
-              {/* <div className={Styles.borderList} > */}
-              {country.borders.map((element, index) => {
-                if (index < 3) return <Borders code={element} key={index} />;
-              })}
-              {/* </div> */}
+              {
+                country.borders.map((element, index) => {
+                  if(index < 3){
+                    return (
+                      <Borders code={element} key={index} />
+                    )
+                  }
+
+                  return "";
+                })
+              }
             </div>
           </div>
         </div>
-        )
       </div>
     );
   }
