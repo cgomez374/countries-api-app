@@ -43,16 +43,15 @@ const CountryDetails = () => {
             </div>
             <div className={Styles.borders}>
               <h4>border countries:</h4>
-              {
-                country.borders.map((element, index) => {
-                  if(index < 3){
-                    return (
-                      <Borders code={element} key={index} />
-                    )
-                  }
-
-                  return "";
-                })
+              { country.borders.length > 0 && 
+                  country.borders.map((element, index) => {
+                    if(index < 3){
+                      return (
+                        <Borders code={element} key={index} />
+                      )
+                    }
+                    return "";
+                  })
               }
             </div>
           </div>
