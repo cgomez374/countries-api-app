@@ -21,6 +21,7 @@ const Countries = () => {
         countries={countries}
         setCountries={setCountries}
         setError={setError}
+        error={error}
       />
       <article className={Styles.countiesList}>
         {!error ? (
