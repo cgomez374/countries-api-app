@@ -1,4 +1,4 @@
-export const getCountry = async (setBorderCountry, alpha3Code) => {
+export const getCountry = async (setBorderCountry, alpha3Code, setError) => {
   if (alpha3Code !== undefined) {
     fetch(`https://restcountries.eu/rest/v2/alpha/${alpha3Code}`)
       .then(async (response) => {
@@ -6,7 +6,7 @@ export const getCountry = async (setBorderCountry, alpha3Code) => {
           var data = await response.json();
           if (data) {
             // console.log(data)
-            // setError(false);
+            setError(false);
             setBorderCountry(data);
           }
         } else if (response.ok === false || response.status === "404") {
@@ -14,7 +14,7 @@ export const getCountry = async (setBorderCountry, alpha3Code) => {
         }
       })
       .catch((error) => {
-        // setError(error);
+        setError(error);
         console.clear();
       });
   }
