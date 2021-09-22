@@ -1,6 +1,6 @@
 export const getCountry = async (setBorderCountry, alpha3Code, setError) => {
   if (alpha3Code !== undefined) {
-    fetch(`https://restcountries.eu/rest/v2/alpha/${alpha3Code}`)
+    fetch(`https://restcountries.com/v2/alpha/${alpha3Code}`)
       .then(async (response) => {
         if (response.ok === true) {
           var data = await response.json();

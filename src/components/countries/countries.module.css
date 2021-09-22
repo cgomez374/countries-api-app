@@ -1,5 +1,4 @@
 .countiesList {
-  /* background-color: hsl(0, 0%, 98%); */
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -10,8 +9,8 @@
 
 .country {
   background-color: hsl(0, 0%, 100%);
-  width: 75%;
-  min-height: 38vh;
+  width: 85%;
+  height: 50vh;
   margin: 2vh auto;
   padding: 0;
 
@@ -28,17 +27,16 @@
 
 .countryImg {
   width: 100%;
-  min-height: 48%;
-  /* border-radius: 5px; */
+  height: 22vh;
   margin: 0;
 }
 
 .countryDetails {
   width: 100%;
-  min-height: 60%;
+  height: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 0;
   padding: 3vh;
 
@@ -63,7 +61,7 @@
     width: 100%;
   }
   .country {
-    width: 75%;
+    width: 90%;
   }
 }
 
@@ -73,13 +71,18 @@
   }
 
   .country {
-    width: 70%;
+    width: 90%;
+    height: 45vh;
   }
 }
 
 @media (max-width: 650px) {
   .countiesList {
     grid-template-columns: repeat(1, 1fr);
-    width: 73%;
+    width: 80%;
+  }
+
+  .country {
+    width: 100%;
   }
 }

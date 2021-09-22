@@ -17,11 +17,11 @@ const Countries = () => {
   //get counties at start
   useEffect(() => {
     //api call
-    getCountries(setCountries);
+    getCountries(setCountries, setError);
   }, []);
 
   return (
-    <main id={darkTheme && "darkBackground"}>
+    <main id={darkTheme ? "darkBackground" : undefined}>
       <InputContainer
         countries={countries}
         setCountries={setCountries}
@@ -30,7 +30,7 @@ const Countries = () => {
       />
       <article
         className={Styles.countiesList}
-        id={darkTheme && "darkBackground"}
+        id={darkTheme ? "darkBackground" : undefined}
       >
         {!error ? (
           countries.map((country) => {
@@ -46,16 +46,16 @@ const Countries = () => {
               >
                 <div
                   className={Styles.country}
-                  id={darkTheme && "darkElements"}
+                  id={darkTheme ? "darkElements" : undefined}
                 >
                   <img
                     className={Styles.countryImg}
-                    src={country.flag}
+                    src={country.flags[0] ? country.flags[0] : "./error.jpg"}
                     alt="country flag"
                   />
                   <div
                     className={Styles.countryDetails}
-                    id={darkTheme && "darkElements"}
+                    id={darkTheme ? "darkElements" : undefined}
                   >
                     {country.name ? <h3>{country.name}</h3> : null}
                     <br />

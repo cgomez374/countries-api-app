@@ -8,9 +8,9 @@ const Navbar = () => {
   return (
     <header>
       <nav className={Styles.navbar}>
-        <ul className={Styles.nav} id={darkTheme && "darkElements"}>
+        <ul className={Styles.nav} id={darkTheme ? "darkElements" : undefined}>
           <li>where in the world?</li>
-          <li onClick={toggleTheme}>
+          <li onClick={toggleTheme} id={Styles.icon}>
             <i class="far fa-moon"></i> dark mode
           </li>
         </ul>

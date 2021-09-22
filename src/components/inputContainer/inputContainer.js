@@ -55,13 +55,13 @@ const InputContainer = ({ countries, setCountries, setError, error }) => {
         onChange={changeHandler}
         className={Styles.search}
         placeholder="Search for a country..."
-        id={darkTheme && "darkElements"}
+        id={darkTheme ? "darkElements" : undefined}
       />
       <select
         name="regions"
         onChange={setCountriesByRegion}
         className={Styles.select}
-        id={darkTheme && "darkElements"}
+        id={darkTheme ? "darkElements" : undefined}
       >
         <option value="Filter by Region">Filter by Region</option>
         <option value="Africa">Africa</option>

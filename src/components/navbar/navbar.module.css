@@ -16,3 +16,7 @@
     align-items: center;
     color: hsl(200, 15%, 8%);
 }
+
+#icon {
+    cursor: pointer;
+}

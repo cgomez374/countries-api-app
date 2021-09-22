@@ -11,7 +11,7 @@ function App() {
 
   return (
     <Router>
-      <div id={darkTheme && "darkBackground"}>
+      <div id={darkTheme ? "darkElements" : undefined}>
         <Navbar />
         <Switch>
           <Route exact path="/">

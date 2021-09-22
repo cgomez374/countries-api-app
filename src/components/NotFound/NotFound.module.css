@@ -2,20 +2,21 @@
     /* background-color: aquamarine; */
     width: 80%;
     height: auto;
-    margin: 10vh auto;
+    margin: 0 auto;
+    padding-top: 10rem;
     text-align: center;
-    color: red;
+    color: #000;
     
 }
 
 .notFound button {
-    background-color: red;
-    width: 40vh;
-    height: 5vh;
+    background-color: hsl(0, 0%, 98%);
+    width: 45vh;
+    height: 8vh;
     margin: 5vh auto;
     border: none;
     outline: none;
-    color: #fff;
+    color: #000;
     font-family: 'Nunito Sans', sans-serif;
     text-transform: capitalize;
     font-size: 1.5rem;

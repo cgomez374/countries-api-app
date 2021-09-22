@@ -28,7 +28,7 @@ const Borders = ({code}) => {
             }}
             className={Styles.border}
           >
-            <button id={darkTheme && "darkElements"}>
+            <button id={darkTheme ? "darkElements" : undefined} >
               {borderCountry.name}
             </button>
           </Link>

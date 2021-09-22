@@ -15,20 +15,23 @@ const CountryDetails = () => {
     //contexts
 
     return (
-      <div className={Styles.detailsPage} id={darkTheme && "darkBackground"}>
+      <div
+        className={Styles.detailsPage}
+        id={darkTheme ? "darkBackground" : undefined}
+      >
         <Link to="/">
           <button
             className={Styles.backButton}
-            id={darkTheme && "darkElements"}
+            id={darkTheme ? "darkElements" : undefined}
           >
             <i class="fas fa-long-arrow-alt-left"></i> back
           </button>
         </Link>
-        <div className={Styles.detailsContainer}>
-          <img src={country.flag} alt="country flag" />
-          <div className={Styles.detailsRight} >
+        <div className={Styles.detailsContainer} >
+          <img src={country.flags[0]} alt="country flag" />
+          <div className={Styles.detailsRight}>
             {country.name ? <h2>{country.name}</h2> : null}
-            <div className={Styles.detailsText} >
+            <div className={Styles.detailsText}>
               <h4>native name: {country.nativeName} </h4>
               <h4>population: {country.population} </h4>
               <h4>region: {country.region} </h4>
@@ -64,7 +67,7 @@ const CountryDetails = () => {
     );
   } catch (e) {
     return (
-      <div>
+      <div id={darkTheme ? "darkBackground" : undefined}>
         <NotFound />
       </div>
     );
