@@ -10,7 +10,7 @@ export const getCountry = async (setBorderCountry, alpha3Code, setError) => {
             setBorderCountry(data);
           }
         } else if (response.ok === false || response.status === "404") {
-          throw Error("country not found");
+          throw "country not found";
         }
       })
       .catch((error) => {

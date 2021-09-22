@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import { useContext } from "react/cjs/react.development";
 import { getCountries } from "../../contexts/api/getCountries";
 import { ThemeContext } from "../../contexts/ThemeContext/ThemeContext";
 import InputContainer from "../inputContainer/inputContainer";
@@ -32,7 +31,7 @@ const Countries = () => {
         className={Styles.countiesList}
         id={darkTheme ? "darkBackground" : undefined}
       >
-        {!error ? (
+        {!error && countries.length > 0 ? (
           countries.map((country) => {
             return (
               <Link

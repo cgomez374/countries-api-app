@@ -5,16 +5,15 @@ export const getCountriesByName = async (setCountries, setError, name) => {
         if (response.ok === true) {
           var data = await response.json();
           if (data) {
-            if(data.hasOwnProperty('status')){
-              throw Error("country not found");
-            }
-            else {
+            if (data.hasOwnProperty("status")) {
+              throw "country not found";
+            } else {
               setError(false);
               setCountries(data);
             }
           }
         } else if (response.ok === false || response.status === "404") {
-            throw Error("country not found");
+          throw "country not found";
         }
       })
       .catch((error) => {

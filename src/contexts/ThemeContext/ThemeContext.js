@@ -17,11 +17,7 @@ const ThemeContextProvider = ({children}) => {
           setDarkTheme(false);
           document.body.style.backgroundColor = "hsl(0, 0%, 98%)";
         }
-      },
-    //   dark: {
-    //     backgroundColor: red,
-    //     color: blue,
-    //   }
+      }
     };
 
     return (
