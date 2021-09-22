@@ -1,17 +1,22 @@
-import React from 'react';
-import Styles from './navbar.module.css';
+import React, { useContext } from "react";
+import { ThemeContext } from "../../contexts/ThemeContext/ThemeContext";
+import Styles from "./navbar.module.css";
 
-const navbar = () => {
-    return (
-        <header>
-            <nav className={Styles.navbar}>
-                <ul className={Styles.nav}>
-                    <li>where in the world?</li>
-                    <li><i class="far fa-moon"></i> dark mode</li>
-                </ul>
-            </nav>
-        </header>
-    )
-}
+const Navbar = () => {
+  const { darkTheme, toggleTheme } = useContext(ThemeContext);
 
-export default navbar
+  return (
+    <header>
+      <nav className={Styles.navbar}>
+        <ul className={Styles.nav} id={darkTheme && "darkElements"}>
+          <li>where in the world?</li>
+          <li onClick={toggleTheme}>
+            <i class="far fa-moon"></i> dark mode
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;

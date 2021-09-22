@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext} from "react";
 import { getCountriesByName } from "../../contexts/api/getCountriesByName";
 import { getCountriesByRegions } from "../../contexts/api/getCountriesByRegions";
 import { getCountries } from "../../contexts/api/getCountries";
 import Styles from "./inputContainer.module.css";
+import { ThemeContext } from "../../contexts/ThemeContext/ThemeContext";
 
 const InputContainer = ({ countries, setCountries, setError, error }) => {
+  //contexts
+  const { darkTheme } = useContext(ThemeContext);
+
+
   //state for change
   const [input, setInput] = useState("");
   const [region, setRegion] = useState("Filter by Region");
@@ -50,11 +55,13 @@ const InputContainer = ({ countries, setCountries, setError, error }) => {
         onChange={changeHandler}
         className={Styles.search}
         placeholder="Search for a country..."
+        id={darkTheme && "darkElements"}
       />
       <select
         name="regions"
         onChange={setCountriesByRegion}
         className={Styles.select}
+        id={darkTheme && "darkElements"}
       >
         <option value="Filter by Region">Filter by Region</option>
         <option value="Africa">Africa</option>
