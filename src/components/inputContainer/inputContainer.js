@@ -1,4 +1,6 @@
-import React, { useEffect, useState, useContext} from "react";
+/* eslint-disable */
+
+import React, { useEffect, useState, useContext } from "react";
 import { getCountriesByName } from "../../contexts/api/getCountriesByName";
 import { getCountriesByRegions } from "../../contexts/api/getCountriesByRegions";
 import { getCountries } from "../../contexts/api/getCountries";
@@ -8,7 +10,6 @@ import { ThemeContext } from "../../contexts/ThemeContext/ThemeContext";
 const InputContainer = ({ countries, setCountries, setError, error }) => {
   //contexts
   const { darkTheme } = useContext(ThemeContext);
-
 
   //state for change
   const [input, setInput] = useState("");
