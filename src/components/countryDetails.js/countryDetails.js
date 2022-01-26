@@ -27,8 +27,11 @@ const CountryDetails = () => {
             <i class="fas fa-long-arrow-alt-left"></i> back
           </button>
         </Link>
-        <div className={Styles.detailsContainer} >
-          <img src={country.flags[0]} alt="country flag" />
+        <div className={Styles.detailsContainer}>
+          <img
+            src={country.flag ? country.flag : "./error.jpg"}
+            alt="country flag"
+          />
           <div className={Styles.detailsRight}>
             {country.name ? <h2>{country.name}</h2> : null}
             <div className={Styles.detailsText}>

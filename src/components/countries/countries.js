@@ -33,6 +33,7 @@ const Countries = () => {
       >
         {!error && countries.length > 0 ? (
           countries.map((country) => {
+            // console.log(country)
             return (
               <Link
                 to={{
@@ -49,7 +50,7 @@ const Countries = () => {
                 >
                   <img
                     className={Styles.countryImg}
-                    src={country.flags[0] ? country.flags[0] : "./error.jpg"}
+                    src={country.flag ? country.flag : "./error.jpg"}
                     alt="country flag"
                   />
                   <div
