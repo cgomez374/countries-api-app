@@ -25,7 +25,8 @@ const InputContainer = ({ countries, setCountries, setError, error }) => {
       let results = [];
 
       countries.forEach((country) => {
-        if (countryRegX.test(country.name.toLowerCase())) results.push(country);
+        if (countryRegX.test(country.name.toLowerCase())) 
+          results.push(country);
       });
 
       setCountries(results);

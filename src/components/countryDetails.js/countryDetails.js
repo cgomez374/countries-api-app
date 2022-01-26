@@ -56,7 +56,7 @@ const CountryDetails = () => {
             </div>
             <div className={Styles.borders}>
               <h4>border countries:</h4>
-              {country.borders.length > 0 &&
+              {country.borders &&
                 country.borders.map((element, index) => {
                   if (index < 3) {
                     return <Borders code={element} key={index} />;
@@ -69,6 +69,7 @@ const CountryDetails = () => {
       </div>
     );
   } catch (e) {
+    console.log(e.message);
     return (
       <div id={darkTheme ? "darkBackground" : undefined}>
         <NotFound />

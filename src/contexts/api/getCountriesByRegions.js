@@ -11,7 +11,7 @@ export const getCountriesByRegions = async (setCountries, setError, region = '')
     //     }
     // }
 
-    fetch(`https://restcountries.com/v2/continent/${region}`)
+    fetch(`https://restcountries.com/v2/region/${region}`)
       .then(async (response) => {
         if (response.ok === true) {
           var data = await response.json();
